@@ -4,12 +4,12 @@ Handoff. The working home for this idea is [poi-search](https://github.com/Azdwa
 
 ## The rule
 
-BMAP is BM25 on a board with a fixed size.
+BMAP is BM25 on a line of terminal blocks.
 
 - The score is BM25. IDF sits inside it: a word weighs in inverse proportion to how many documents contain it, term frequency saturates, and document length is normalized.
-- The first square is a person, 1.75 m. Each next square is 1.5 times the last: `h_n = 1.75 * 1.5^(n-1)`.
-- The Earth–Moon mean distance is 384 400 km. Square 48 reaches 330 619 km. Square 49 reaches 495 928 km and passes the Moon.
-- 49 is the last new square. After that, rank and reuse the squares already on the board.
+- Each new block is placed behind the last and is 50% bigger. The first block is a person, 1.75 m: `h_n = 1.75 * 1.5^(n-1)`.
+- The Earth–Moon mean distance is 384 400 km. Block 48 reaches 330 619 km. Block 49, placed behind that one and 50% bigger, reaches 495 928 km and hits the Moon.
+- 49 is the last new block. After that, rank and reuse the blocks already in the line.
 
 ## Where the rest lives
 
@@ -19,7 +19,7 @@ Once the ceiling of 49 is written into poi-search, this repo can be removed. The
 
 ## A neighbouring note
 
-A separate note says each agent gets about nine responses, and then the thread folds and rotates. That note is about levels of input and output in a thread. Its home is a Claude project. It may belong beside the ceiling of 49, and it may be a different project that got mixed in here. It is not written in this repo or in poi-search.
+The nine-response note is fork levels, in [fork-nivaer](https://github.com/Azdwarf5Azdwarf/fork-nivaer). Each agent gets about nine responses, then the thread folds and rotates. That is about levels of input and output in a thread. The written rule there says: after x iterations an agent pings its friends, a friend answers with a delta of what is happening, and the lookback stops at 3 days. The count is left as x. It may belong beside the ceiling of 49.
 
 ## Kernel
 
