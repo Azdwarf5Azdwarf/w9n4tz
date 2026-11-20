@@ -17,6 +17,10 @@ BMAP is BM25 on a board with a fixed size.
 
 Once the ceiling of 49 is written into poi-search, this repo can be removed. The same handoff is filed in both places so either copy is enough.
 
+## A neighbouring note
+
+A separate note says each agent gets about nine responses, and then the thread folds and rotates. That note is about levels of input and output in a thread. Its home is a Claude project. It may belong beside the ceiling of 49, and it may be a different project that got mixed in here. It is not written in this repo or in poi-search.
+
 ## Kernel
 
 The lines below are the original note, left as written.
